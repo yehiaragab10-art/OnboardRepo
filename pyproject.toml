@@ -8,8 +8,24 @@ version = "0.1.0"
 description = "Local-first code RAG pipeline for repository understanding."
 readme = "README.md"
 requires-python = ">=3.11"
-dependencies = []
-
+dependencies = [
+    #Core AST Parsing
+    "tree-sitter==0.25.2",
+    "tree-sitter-languages==1.10.2",
+    
+    #Vector Database & Retrieval Engine
+    "lancedb==0.33.0",
+    "rank-bm25==0.2.2",              #Mature, highly stable BM25 implementation
+    "sentence-transformers==5.5.1",  #Local embedding generation via ONNX/ModernBERT
+    
+    #LLM Provider & Orchestration Layer
+    "langchain-google-genai==4.2.4",
+    "google-genai==2.7.0",
+    
+    #System & Data Integrity
+    "python-dotenv==1.2.2",
+    "pydantic>=2.13.4",              #Leverage native speedups and strict field validation
+]
 [project.optional-dependencies]
 dev = [
     "pytest",
