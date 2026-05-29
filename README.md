@@ -1,3 +1,4 @@
+![CI](https://github.com/yehiaragab10-art/onboardrepo/actions/workflows/ci.yml/badge.svg)
 # OnboardRepo
 
 OnboardRepo is a local-first AI codebase onboarding assistant. It is a command-line application that indexes a local Git repository, including both its source code and documentation. It exposes this index through a multi-agent LangGraph runtime to answer questions or guide engineers through structured onboarding journeys directly from the terminal.
