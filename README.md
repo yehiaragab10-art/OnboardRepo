@@ -30,6 +30,30 @@ OnboardRepo v1.0 is built as a single-process Python CLI to ensure simple instal
   * `rank-bm25` combined with an active reranker for lexical and hybrid search.
   * `SQLite` for local storage of memory states and symbol graphs.
 
+## Developer Notes
+
+### API Key Management
+
+* Store all API keys exclusively in the `.env` file.
+* The `.env` file is included in `.gitignore` and must never be committed to the repository.
+* Do not hardcode API keys in source code, configuration files, tests, or documentation.
+
+### Local Development
+
+
+GEMINI_API_KEY=your_key_here
+
+
+### GitHub Actions
+
+For CI/CD workflows, configure the Gemini API key as a repository secret named:
+
+
+GEMINI_API_KEY
+
+
+The secret will be injected into workflows as an environment variable during execution.
+
 ## Getting Started
 
 *(Setup instructions, installation commands, and complete documentation are coming soon.)*
