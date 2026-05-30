@@ -4,8 +4,9 @@ from google import genai
 
 from onboardrepo.llm import get_gemini_api_key
 
-
-PROMPT = "Reply with exactly the words inside quotes: \"Gemini is working\". Do not include any other text or formatting."
+PROMPT = "Reply with exactly the words inside quotes: " \
+"\"Gemini is working\". Do not include any " \
+"other text or formatting."
 
 
 def main() -> int:

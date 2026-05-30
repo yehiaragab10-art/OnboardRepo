@@ -1,6 +1,7 @@
+import warnings
+
 from tree_sitter import Parser
 from tree_sitter_languages import get_language
-import warnings
 
 warnings.filterwarnings("ignore", category=FutureWarning)
 
